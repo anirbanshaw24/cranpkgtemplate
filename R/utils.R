@@ -1,14 +1,19 @@
 
 #' Generate a normalized package resource file path.
 #'
-#' Returns the normalized file path for a resource in the `cranpkgtemplate` package.
-#' If the file does not exist and `allow_error = TRUE`, an error is thrown. If `allow_error = FALSE`,
+#' Returns the normalized file path for a resource in the `cranpkgtemplate`
+#'  package.
+#' If the file does not exist and `allow_error = TRUE`, an error is thrown.
+#'  If `allow_error = FALSE`,
 #' returns an empty `fs_path` object.
 #'
-#' @param ... Character vectors specifying file path components within the package.
-#' @param allow_error Logical. If `TRUE`, throw an error if the file is missing; otherwise, return `fs::path("")`.
+#' @param ... Character vectors specifying file path components within
+#'  the package.
+#' @param allow_error Logical. If `TRUE`, throw an error if the file
+#'  is missing; otherwise, return `fs::path("")`.
 #'
-#' @return An `fs_path` object (normalized file path) or an empty path if missing and `allow_error = FALSE`.
+#' @return An `fs_path` object (normalized file path) or an empty path
+#'  if missing and `allow_error = FALSE`.
 #' @export
 pkg_path <- function(..., allow_error = FALSE) {
   fs::path(
